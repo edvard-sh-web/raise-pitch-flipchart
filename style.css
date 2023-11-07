@@ -1,17 +1,15 @@
 body{
-    padding-top: 100px;
+    padding-top: 70px;
 	background:#ccc;
+    font-family: Roboto;
     display: flex;
+	font-size: 24px;
 
 }
 #book{
-	width:900px;
-	height:600px;
+	width:1100px;
+	height:800px;
     margin: auto;
-}
-
-#book .turn-page{
-	background-color:white;
 }
 
 #book .cover{
@@ -21,19 +19,74 @@ body{
 #book .cover h1{
 	color:white;
 	text-align:center;
-	font-size:50px;
-	line-height:500px;
+	font-size:48px;
+	line-height:600px;
 	margin:0px;
 }
 #book .regular-page{
     display: flex;
-    justify-content: center;
-    align-items: center;
+	flex-direction: column;
+    justify-content:flex-start;
+	gap: 3rem;
+	align-items:center;
+	padding: 4rem;
+	/* background-color: orange; */
+	background-image: url(./images/background.avif);
+	background-repeat:no-repeat;
+	background-size: cover;
+
 
 }
-#book .regular-page > *{
-    /* margin: auto; */
+.regular-page ul{
+	align-self: flex-start;
+	display: flex;
+	list-style: none;
+	text-align: center;
+	gap: 2rem;
+} 
+#book .regular-page > * {
+	max-width: 100%;
 }
+.first>h1, div{
+	margin-left: -20px;
+
+}
+.first>ul{
+	margin-left:60px;
+
+}
+.second>ul {
+	gap: 0px;
+
+}
+.third>ul {
+	gap: 8px;
+
+}
+#book .regular-page.second > * {
+	margin-left: 0px;
+
+}
+#book .regular-page.second img {
+	max-width: 80%;
+
+}
+
+a{
+	text-decoration: none;
+}
+li{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	max-width: 31%;
+}
+.list-item-img{
+	max-width: 200px;
+	margin-top: 20px;
+	
+}
+
 #book .loader{
 	background-image:url(loader.gif);
 	width:24px;
@@ -74,4 +127,7 @@ body{
 	background-image:-moz-linear-gradient(right, #FFF 95%, #ddd 100%);
 	background-image:-o-linear-gradient(right, #FFF 95%, #ddd 100%);
 	background-image:-ms-linear-gradient(right, #FFF 95%, #ddd 100%);
+}
+#b{
+	display: inline;
 }

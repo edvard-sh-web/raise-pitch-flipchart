@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,87 +9,183 @@
     <script type="text/javascript" src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
     <script type="text/javascript" src="https://rkei0.csb.app/turn.min.js"></script>
     <script src="./code.js"></script>
-
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
 </head>
+
 <body>
     <div id="book">
-        <div class="cover"><h1>Flipchart</h1></div>
-        <div class="regular-page"><h1>2</h1></div>
-        <div class="regular-page"><h1>2</h1></div>
-        <div class="regular-page"><h1>2</h1></div>
-        <div class="regular-page"><h1>2</h1></div>
-        <div class="regular-page"><h1>2</h1></div>
+        <div class="cover">
+            <h1>Performance (self)review</h1>
+        </div>
+        <div class="regular-page first">
+            <h1>
+                    Performance and Dedication
+                </h1>
+                <div> Last 6 months:</div>
+                <ul>
+                    <li><span> <b>2</b> Shadowing/Monitoring sessions</span> 
+                        <img class="list-item-img" src="./images/shadowing.png" alt="">
+                    </li>
+                    <li><span><b>2</b> Ticket analysis projects</span> 
+                        <img class="list-item-img" src="./images/analysis.svg" alt="">
+
+                    </li>
+                    <li><span><b>2</b> buddy waves</span> 
+                        <img class="list-item-img" src="./images/buddy.png" alt="">
+
+                    </li>
+                    
+                </ul>
+        </div>
+        <div class="regular-page second">
+            <h1>
+                    Performance and Dedication
+                </h1>
+                <div> Last 6 months:</div>
+                <ul>
+                    <li><span><b>5</b> consecutive months of being in top 10 by performance across the global delivery team</span>
+                    </li>
+                    <li><span><b>6</b> consecutive months of top team performance (OPSH)</span></li>
+                    <li><span>Excellect Customer Care (<b>2x</b> average number of CSAT surveys across the team)</span></li>
+                </ul>
+                <img class="slide-img" src="./images/top-global.jpeg" alt="">
+
+        </div>
+        <div class="regular-page third">
+            <h1>
+                    Performance and Dedication
+                </h1>
+                <div> Last 6 months:</div>
+                <ul>
+                    <li><span><b>Volunteered</b> to help on Velo queue for multiple weeks</span>
+                        <img class="list-item-img" src="./images/volunteer.svg" alt="">
+
+                    </li>
+                    <li><span><b>Created</b> a <a href="https://edvards86.wixsite.com/de-defang-url-tool">productivity tool</a> for
+                        the team agents</span>
+                        <img class="list-item-img" src="./images/productivity-tool.png" alt="">
+
+                        <!-- <br> Now working on second version (Chrome extension). Extension for refund calculator is in the
+                        workings. -->
+                    </li>
+                    <li><span><b>Completed</b> Trademark training, now handling TM cases</span>
+                        <img class="list-item-img" src="./images/trademark.svg" alt="">
+
+                    </li>
+                </ul>
+        </div>
+        <div class="regular-page">
+            <h1>
+                Merits in the Workplace
+            </h1>
+            <ul>
+                <li>Company man</li>
+                <li>Best jokes</li>
+                <li>Always help with "dead air"</li>
+                <li>Create friendly and relaxed atmosphere</li>
+                <li>Help to cultivate culture of trust and free exchange of ideas</li>
+                <li>Take initiative in team activities (organizing team meeeting activities, heplting to plan
+                    teambuildings)</li>
+                <li></li>
+                <li></li>
+            </ul>
+
+        </div>
+        <div class="regular-page">
+            <h1>Ecomomic reality</h1>
+            <ul>
+                <li>Last and only salary review was in Fall 2021</li>
+                <li>Not asking for a raise, just for same level of compensation from 2021</li>
+            </ul>
+        </div>
+        <div class="regular-page">
+            <h1>Families are always rising and falling in Ukraine.</h1>
+        </div>
+        <div class="regular-page">
+            <h1>Because of inflation
+            </h1>
+        </div>
+        <div class="regular-page">
+            <h1>The least you can do is keep my salary consistent wiith the inflation. (c) Dwight K. Schrute
+            </h1>
+        </div>
     </div>
-    
+
     <!-- <div id="controls">
         <label for="page-number">Page:</label> <input type="text" size="3" id="page-number"> of <span id="number-pages"></span>
     </div> -->
-    
+
     <script type="text/javascript">
-    
+
         // Sample using dynamic pages with turn.js
-    
-        var numberOfPages = 6; 
-    
-    
+
+        var numberOfPages = 6;
+
+
         // Adds the pages that the book will need
         function addPage(page, book) {
             // 	First check if the page is already in the book
             if (!book.turn('hasPage', page)) {
                 // Create an element for this page
-                var element = $('<div />', {'class': 'page '+((page%2==0) ? 'odd' : 'even'), 'id': 'page-'+page}).html('<i class="loader"></i>');
+                var element = $('<div />', { 'class': 'page ' + ((page % 2 == 0) ? 'odd' : 'even'), 'id': 'page-' + page }).html('<i class="loader"></i>');
                 // If not then add the page
                 book.turn('addPage', element, page);
                 // Let's assum that the data is comming from the server and the request takes 1s.
-                setTimeout(function(){
-                        element.html('<div class="data">Data for page '+page+'</div>');
+                setTimeout(function () {
+                    element.html('<div class="data">Data for page ' + page + '</div>');
                 }, 6);
             }
         }
-    
-        $(window).ready(function(){
-            $('#book').turn({acceleration: true,
-                                pages: numberOfPages,
-                                elevation: 50,
-                                gradients: !$.isTouch,
-                                when: {
-                                    turning: function(e, page, view) {
-    
-                                        // Gets the range of pages that the book needs right now
-                                        var range = $(this).turn('range', page);
-    
-                                        // Check if each page is within the book
-                                        for (page = range[0]; page<=range[1]; page++) 
-                                            addPage(page, $(this));
-    
-                                    },
-    
-                                    turned: function(e, page) {
-                                        $('#page-number').val(page);
-                                    }
-                                }
-                            });
-    
+
+        $(window).ready(function () {
+            $('#book').turn({
+                acceleration: true,
+                pages: numberOfPages,
+                elevation: 50,
+                gradients: !$.isTouch,
+                when: {
+                    turning: function (e, page, view) {
+
+                        // Gets the range of pages that the book needs right now
+                        var range = $(this).turn('range', page);
+
+                        // Check if each page is within the book
+                        for (page = range[0]; page <= range[1]; page++)
+                            addPage(page, $(this));
+
+                    },
+
+                    turned: function (e, page) {
+                        $('#page-number').val(page);
+                    }
+                }
+            });
+
             $('#number-pages').html(numberOfPages);
-    
-            $('#page-number').keydown(function(e){
-    
-                if (e.keyCode==13)
+
+            $('#page-number').keydown(function (e) {
+
+                if (e.keyCode == 13)
                     $('#book').turn('page', $('#page-number').val());
-                    
+
             });
         });
-    
-        $(window).bind('keydown', function(e){
-    
-            if (e.target && e.target.tagName.toLowerCase()!='input')
-                if (e.keyCode==37)
+
+        $(window).bind('keydown', function (e) {
+
+            if (e.target && e.target.tagName.toLowerCase() != 'input')
+                if (e.keyCode == 37)
                     $('#book').turn('previous');
-                else if (e.keyCode==39)
+                else if (e.keyCode == 39)
                     $('#book').turn('next');
-    
+
         });
-    
+
     </script>
-    </body>
+</body>
+
 </html>
