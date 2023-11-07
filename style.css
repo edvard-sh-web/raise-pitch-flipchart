@@ -59,7 +59,7 @@ body{
 	gap: 0px;
 
 }
-.third>ul {
+.third>ul, .fifth>ul {
 	gap: 8px;
 
 }
