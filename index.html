@@ -17,6 +17,8 @@
 </head>
 
 <body>
+    <div><button id="back" class="nav-btn"> < </button></div>
+
     <div id="book">
         <div class="cover">
             <h1>Compensation review</h1>
@@ -162,8 +164,14 @@
             <p style="width: 90%; text-align: center; transform: translateY(-50px);">My preference would be the direct salary increase, but I will also be grateful for a stock package, extra vacation days or any other form of compensation of equal value. 
             </p>
         </div>
+        <div class="regular-page" style="align-items: center; justify-content: center; transform: translateY(-90px);">
+            <h1>Thank you for your attention!
+            </h1>
+           
+        </div>
+ 
     </div>
-
+    <div><button id="forward" class="nav-btn"> >     </button></div>
     <!-- <div id="controls">
         <label for="page-number">Page:</label> <input type="text" size="3" id="page-number"> of <span id="number-pages"></span>
     </div> -->
@@ -233,6 +241,9 @@
                     $('#book').turn('next');
 
         });
+
+        document.getElementById("forward").addEventListener("click", () => {$('#book').turn('next')})
+        document.getElementById("back").addEventListener("click", () => {$('#book').turn('previous')})
 
     </script>
 </body>

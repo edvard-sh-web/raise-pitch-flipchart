@@ -4,14 +4,25 @@ body{
     font-family: Roboto;
     display: flex;
 	font-size: 24px;
+	align-items: center;
+	justify-content: center;
 
 }
 #book{
-	width:1100px;
+	max-width:1100px;
 	height:800px;
-    margin: auto;
+    /* margin: auto; */
 }
-
+.nav-btn{
+	margin: 50px;
+	font-size: 50px;
+	min-width: 70px;
+	padding: 6px 16px;
+	/* aspect-ratio: 1/1; */
+}
+#back{
+	transform: translateX(-20px);
+}
 #book .cover{
 	background:#333;
 }
@@ -22,6 +33,7 @@ body{
 	font-size:48px;
 	line-height:600px;
 	margin:0px;
+	transform: translateY(90px);
 }
 #book .regular-page{
     display: flex;
